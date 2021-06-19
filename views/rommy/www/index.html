@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/master.css">
+        <title>Rommy- A home management system</title>
+    </head>
+    <body>
+            <!-- Home page -->
+            <div data-role="page" id="home" data-theme="b" class="rs-theme">
+                <div data-role="header">
+                  <h3><a href="#home"> Rommy-A cleaning Schedule system </a></h3>
+                </div>
+                <div data-role="main" class="ui-content">
+                  <h2>Login</h2>
+                  <form method="post" action="/login" name="login">
+                    <label for="xfname">Username</label>
+                    <input type="text" name="unameLogin" id="unameLogin" data-clear-btn="true">
+                    <label for="yfname">Password</label>
+                    <input type="password" name="passLogin" id="passLogin" data-clear-btn="true">
+                    <input type="button" name="submit" id="login" data-inline="true" value="Submit">
+                  </form>
+                  <div id="show-message"></div>
+                  
+                </div>
+                <div data-role="main" class="ui-content" >
+                  <p>Don't have account? <a href="#register">Register Now</a></p>
+                </div>
+              </div>
+            
+              <!-- Home page end -->
+            <!-- Signup registartion page -->
+              <div data-role="page" id="register" data-theme="b">
+                <div data-role="header">
+                  <h3><a href="#home"> Rommy-A cleaning Schedule system </a></h3>
+                </div>
+                <div data-role="main" class="ui-content">
+                  <h2>Register Now</h2>
+                  <form method="post" action="/signup" name="registration">
+                    <div class="ui-field-contain">
+                    <label for="afname">Username</label>
+                    <input type="text" name="uname" id="uname" data-clear-btn="true">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass" data-clear-btn="true">
+                    <label for="conf_pass">Confirm Password</label>
+                    <input type="password" name="conf_pass" id="conf_pass" data-clear-btn="true" equalTo="#pass">
+                    <label for="p_room">Number of people in room</label>
+                    <input type="text" name="p_room" id="p_room" data-show-value="true">
+                    </div>
+                    <div class="ui-field-contain">
+                      <fieldset data-role="controlgroup" id="show-here">
+                          <!-- the data for extra member will be displayed here -->
+                      </fieldset>
+                    </div>
+                    <input type="button" id="save_value" data-inline="true" value="Submit">
+                  </form>
+                  <div data-role="main" class="ui-content">
+                      <div id="show-msg"></div>
+                  </div>
+                </div>
+            
+                <div data-role="main" class="ui-content">
+                  <p>Already made an account?  <a href="#login">Login</a></p>
+                </div>
+              </div>
+              <!-- Regsiter page end -->
+            <!-- Success Regsitartion  page -->
+    </body>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</html>
